@@ -2,11 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+//925
+using UnityEngine.SceneManagement;
+//
 
 public class FinalMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private Collider2D coll;
+    //925 1 
+    //private Collider2D coll;
+    public Collider2D coll;
+
     private Animator anim;
 
     public float speed, jumpForce;
@@ -19,11 +25,18 @@ public class FinalMovement : MonoBehaviour
     bool jumpPressed;
     int jumpCount;
 
+    //925需要新加的东西
+    public int Cherry;
+    public Text CherryNum;
+    private bool isHurt;
+    //
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        coll = GetComponent<Collider2D>();
+        //925 1
+        //coll = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
     }
 
@@ -100,4 +113,27 @@ public class FinalMovement : MonoBehaviour
             anim.SetBool("falling", true);
         }
     }
+    //925重原来复制的代码
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Collection")
+        {
+            //老师的代码
+            //cherryAudio.Play();
+            //
+
+            Destroy(collision.gameObject);
+            Cherry += 1;
+            CherryNum.text = Cherry.ToString();
+        }
+
+        if(collision.tag == "DeadLine")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+
+
+
+
 }
