@@ -53,8 +53,10 @@ public class FinalMovement : MonoBehaviour
     {
         isGround = Physics2D.OverlapCircle(groundCheck.position, 0.1f, ground);
 
-        GroundMovement();
-
+        if (!isHurt)
+        {
+            GroundMovement();
+        }
         Jump();
 
 
@@ -112,11 +114,23 @@ public class FinalMovement : MonoBehaviour
             anim.SetBool("jumping", false);
             anim.SetBool("falling", true);
         }
+        //new 10.1
+        if (isHurt)
+        {
+            anim.SetBool("hurt", true);
+            anim.SetFloat("runnig", 0);
+            if (Mathf.Abs(rb.velocity.x) < 0.1f)
+            {
+                anim.SetBool("hurt", false);
+                anim.SetBool("Idle", true);
+                isHurt = false;
+            }
+        }
     }
     //925重原来复制的代码
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Collection")
+        if (collision.tag == "Cherry")
         {
             //老师的代码
             //cherryAudio.Play();
@@ -133,7 +147,32 @@ public class FinalMovement : MonoBehaviour
         }
     }
 
+    //10.1 新加的，后面
+    //消灭敌人
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            if (anim.GetBool("falling"))
+            {
+                Destroy(collision.gameObject);
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce * Time.deltaTime);
+                anim.SetBool("jumping", true);
+            }
+            else if (transform.position.x < collision.gameObject.transform.position.x)
+            {
+                rb.velocity = new Vector2(-6, rb.velocity.y);
+                isHurt = true;
+            }
+            else if (transform.position.x > collision.gameObject.transform.position.x)
+            {
+                rb.velocity = new Vector2(6, rb.velocity.y);
+                isHurt = true;
+            }
 
+        }
+
+    }
 
 
 }
