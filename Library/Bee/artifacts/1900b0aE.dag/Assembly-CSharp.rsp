@@ -340,6 +340,7 @@
 "Assets/Scripts/EnterDialog.cs"
 "Assets/Scripts/EnterHouse.cs"
 "Assets/Scripts/FinalMovement.cs"
+"Assets/Scripts/OutHouse.cs"
 -langversion:9.0
 
 /deterministic

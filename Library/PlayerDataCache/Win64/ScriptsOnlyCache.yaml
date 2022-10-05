@@ -94,35 +94,35 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 748}
+      Script: {instanceID: 750}
     - Class: 114
-      Script: {instanceID: 1636}
+      Script: {instanceID: 1638}
     - Class: 114
-      Script: {instanceID: 1936}
+      Script: {instanceID: 1658}
     - Class: 114
-      Script: {instanceID: 2216}
+      Script: {instanceID: 1940}
     - Class: 114
-      Script: {instanceID: 2286}
+      Script: {instanceID: 2220}
     - Class: 114
-      Script: {instanceID: 2478}
+      Script: {instanceID: 2290}
     - Class: 114
-      Script: {instanceID: 2528}
+      Script: {instanceID: 2482}
     - Class: 114
-      Script: {instanceID: 2588}
+      Script: {instanceID: 2532}
     - Class: 114
-      Script: {instanceID: 2656}
+      Script: {instanceID: 2592}
     - Class: 114
-      Script: {instanceID: 2706}
+      Script: {instanceID: 2660}
     - Class: 114
-      Script: {instanceID: 2814}
+      Script: {instanceID: 2710}
     - Class: 114
-      Script: {instanceID: 2892}
+      Script: {instanceID: 2818}
     - Class: 114
-      Script: {instanceID: 3054}
+      Script: {instanceID: 2896}
     - Class: 114
-      Script: {instanceID: 3252}
+      Script: {instanceID: 3058}
     - Class: 114
-      Script: {instanceID: 24794}
+      Script: {instanceID: 3256}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -187,17 +187,17 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 748}
+      Script: {instanceID: 750}
     - Class: 114
-      Script: {instanceID: 1936}
+      Script: {instanceID: 1940}
     - Class: 114
-      Script: {instanceID: 2478}
+      Script: {instanceID: 2482}
     - Class: 114
-      Script: {instanceID: 2588}
+      Script: {instanceID: 2592}
     - Class: 114
-      Script: {instanceID: 2706}
+      Script: {instanceID: 2710}
     - Class: 114
-      Script: {instanceID: 2892}
+      Script: {instanceID: 2896}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -229,6 +229,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UIElements
     className: PanelRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 12a8ac9310431d2917d8c0eb7e5bd4b7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Enemy_frog
   - hash:
       serializedVersion: 2
       Hash: 694d20920c0e41f567e119f7159a3644
@@ -769,14 +775,9 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnterHouse
-  - hash:
-      serializedVersion: 2
-      Hash: 12a8ac9310431d2917d8c0eb7e5bd4b7
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Enemy_frog
   platform: 19
   scenePathNames:
   - Assets/Scenes/Test.unity
   - Assets/Scenes/house.unity
-  playerPath: D:/JackLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL/unitycode/Happy! fox.exe
+  playerPath: D:/JackLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL/unitycode/gametest1/Happy!
+    fox.exe
